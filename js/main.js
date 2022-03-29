@@ -1,6 +1,9 @@
 function getRandomInt(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
+  if (min >= max) {
+    throw new Error('Минимальное число не может быть больше максимального!');
+  }
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
